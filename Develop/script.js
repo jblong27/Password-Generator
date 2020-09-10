@@ -58,14 +58,12 @@ function writePassword() {
   var passWord = "";
   var bank = (type1 + type2 + type3 + type4);
   function generatePassword() {
-    // used while loop instead of for, gotta do what you gotta do
+    // used while loop instead of for
     while (passWord.length < length) {
       passWord += bank[Math.floor(Math.random() * bank.length)];
     }
-    // we're live! returning random passwords the length of the input on line 13
     console.log(passWord); 
   }
-  // nice.
   generatePassword();
   // this code should change the text in the box to the newly generated password
   var passwordText = document.querySelector("#password");
